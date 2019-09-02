@@ -307,6 +307,13 @@ return L.view.extend({
 		o.filter = out.filter;
 		o.cfgvalue = out.cfgvalue;
 
+		o = s.taboption('general', form.ListValue, 'cone_type', _('Enable ConeNat support'));
+		o.value('full', _('Full Cone'));
+		o.value('ar', _('Address-Restricted Cone'));
+		o.value('pr', _('Port-Restricted Cone'));
+		o.value('', _('Symmetric NAT'));
+		o.modalonly = true;
+
 		return m.render();
 	}
 });
